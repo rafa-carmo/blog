@@ -9,4 +9,7 @@ export const Wrapper = tw.div`
     fixed
     top-0
     z-10
+    h-16
+    bg-zinc-300/50
+    dark:bg-transparent
 `

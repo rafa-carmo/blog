@@ -1,6 +1,6 @@
 import { Logo } from 'components/Logo'
 
-import { Options } from './Options/Options'
+import { Options } from './Options'
 import { SearchBar } from './SearchBar'
 import * as S from './styles'
 
@@ -11,7 +11,7 @@ export function Menu() {
         <Logo width={50} height={30} />
         Blog
       </div>
-      <div className="flex-1">
+      <div className="flex-1 hidden md:block">
         <Options />
       </div>
       <div className="pr-5">
