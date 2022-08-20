@@ -8,6 +8,7 @@
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "swiper": "^8.3.2",
     "util": "^0.12.4"
   },
   "devDependencies": {
@@ -23,9 +24,11 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "@types/node": "^18.7.4",
     "@types/prettier": "^2.7.0",
     "@types/react": "^18.0.17",
+    "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",

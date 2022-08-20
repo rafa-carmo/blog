@@ -14,7 +14,7 @@ export function Base({ children }: BaseProps) {
   return (
     <div className={`${isDark ? 'dark' : 'light'}`}>
       <button
-        className="absolute bottom-2 right-2 p-2 text-zinc-100 bg-zinc-800 dark:text-zinc-800 dark:bg-zinc-200 transition-all rounded-md opacity-25 hover:opacity-75"
+        className="fixed z-50 bottom-2 right-2 p-2 text-zinc-800 border border-black bg-zinc-200/50 dark:text-zinc-100 dark:bg-zinc-200/50 transition-all rounded-md opacity-50 hover:opacity-75"
         onClick={() => setIsDark(!isDark)}
       >
         {isDark ? (

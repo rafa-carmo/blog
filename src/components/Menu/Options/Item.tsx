@@ -9,7 +9,7 @@ interface ItemProps {
 export default function Item({ label, hasSubItem = false }: ItemProps) {
   return (
     <div
-      className={`flex relative text-white ${
+      className={`flex relative dark:text-white ${
         hasSubItem && 'mr-5'
       } cursor-pointer
       font-[Merriweather]

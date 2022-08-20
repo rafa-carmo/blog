@@ -1,5 +1,6 @@
 import { Container } from 'components/Container'
-import { EnvelopeSimple } from 'phosphor-react'
+import { HomeSlider } from 'components/HomeSlider'
+import { MagnifyingGlass } from 'phosphor-react'
 import { Base } from 'templates/Base'
 
 import * as S from './styles'
@@ -17,13 +18,17 @@ export function Home() {
             </S.Subtitle>
           </S.Header>
           <S.NewsletterContainer>
-            <S.NewsletterInput placeholder="Seja notificado de novidades" />
-            <div className="absolute right-2 top-0 bottom-0 flex items-center opacity-30">
-              <EnvelopeSimple size={32} weight="bold" />
-            </div>
+            <S.NewsletterInput placeholder="O que está procurando?" />
+            <button className="absolute right-2 top-0 bottom-0 flex items-center gap-2">
+              {/* <EnvelopeSimple size={32} weight="bold" className="opacity-30" /> */}
+              <MagnifyingGlass size={32} weight="bold" className="opacity-30" />
+            </button>
           </S.NewsletterContainer>
         </Container>
       </S.HeaderContainer>
+      <div className="py-10">
+        <HomeSlider />
+      </div>
     </Base>
   )
 }

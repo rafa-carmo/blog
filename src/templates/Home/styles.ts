@@ -8,10 +8,13 @@ export const HeaderContainer = tw.div`
     dark:border-white/50
     border-zinc-900/50
     p-7
-`
+    
+    min-h-[25rem]
+    `
 
 export const Header = tw.div`
     mb-4
+    pb-10
 `
 
 export const Title = tw.h1`
@@ -40,6 +43,7 @@ export const Subtitle = tw.h2`
 export const NewsletterContainer = tw.div`
     max-w-md 
     relative
+    mb-10
 `
 
 export const NewsletterInput = tw.input`
