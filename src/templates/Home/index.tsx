@@ -33,7 +33,7 @@ export function Home({ cards }: HomeProps) {
       </S.HeaderContainer>
       <Container>
         <Heading text="Destaques" />
-        <div className="flex flex-shrink gap-5 w-full h-full mt-4">
+        <div className="flex md:flex-shrink gap-8 w-full h-full mt-4 flex-col md:flex-row">
           {cards.map((card, index) => (
             <div
               key={card.title}
@@ -46,8 +46,15 @@ export function Home({ cards }: HomeProps) {
         </div>
       </Container>
       <Container>
-        <div className="mt-10 w-full h-screen">Conteudo</div>
+        <div className="mt-10 w-full h-screen flex gap-10 md:flex-row flex-col">
+          <div className="flex-[60%] bg-white w-full p-10">Matérias</div>
+          <div className="flex-1 bg-white">Side</div>
+        </div>
       </Container>
+
+      <footer className=" grid items-center w-full bg-white h-52 mt-10 text-center">
+        footer
+      </footer>
     </Base>
   )
 }

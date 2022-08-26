@@ -7,7 +7,7 @@ const WrapperModifiers = {
   text-zinc-700
   `,
   large: `
-  text-white
+    md:text-white
     `
 }
 
@@ -15,7 +15,8 @@ type SizeProps = Pick<PostCardProps, 'size'>
 export const Wrapper = tw.article`
     relative
     overflow-hidden
-    h-[342px]
+    h-full
+    min-h-[342px]
     w-full
     group
     ${({ size }: SizeProps) => size && WrapperModifiers[size]}
@@ -35,7 +36,8 @@ const CoverModifier = {
         relative
     `,
   large: `
-        absolute
+        relative
+        md:absolute
         top-0
         bottom-0
         left-0
@@ -64,15 +66,20 @@ export const Content = tw.div`
     z-20
     w-full
     h-full
-    p-5
-    ${({ size }: SizeProps) => size === 'medium' && 'bg-white'}
+    px-5
+    pb-4
+    bg-white
+
+    ${({ size }: SizeProps) =>
+      size === 'medium' ? 'bg-white' : 'md:bg-transparent'}
 
 `
 
 export const MetaCategory = tw.ul`
     text-white
     mb-auto
-    ${({ size }: SizeProps) => size === 'medium' && 'absolute     top-2'}
+    ${({ size }: SizeProps) =>
+      size === 'medium' ? 'absolute top-2' : 'absolute top-2 md:relative'}
 `
 
 export const Category = tw.li`
@@ -91,6 +98,7 @@ export const Title = tw.h2`
     relative
     text-3xl
     font-bold
+    mt-auto
     mb-5
     line-clamp-2
 `

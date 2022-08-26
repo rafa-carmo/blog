@@ -5,4 +5,6 @@ export const Container = tw.div`
     max-w-screen-xl
     mx-auto
     px-auto
+    p-4
+    md:p-0
 `

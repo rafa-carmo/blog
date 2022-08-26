@@ -5,38 +5,49 @@ export const Wrapper = tw.main`
 `
 export const HeaderContainer = tw.div`
     border-b
-        
+
     p-7
     min-h-[25rem]
     mb-8
+    
 `
 
 export const Header = tw.div`
     mb-4
     pb-10
+
 `
 
 export const Title = tw.h1`
-    dark:text-white 
+    dark:text-white
     text-zinc-700 
     font-extrabold 
     font-[Merriweather] 
-    text-5xl 
-    md:mt-32 
+    md:text-5xl 
+    text-2xl
+    mt-32 
     relative 
     z-1
+
+    flex-1  
 `
 
 export const Subtitle = tw.h2`
     dark:text-white 
     text-zinc-700 
-    font-extrabold 
+    md:font-extrabold 
+    font-light
     font-[Merriweather] 
-    text-lg 
+    
+    md:text-lg 
+    text-base
     md:mt-8 
+    mt-3
     pl-3 
     relative 
     z-1
+    flex-1
+    
 `
 
 export const NewsletterContainer = tw.div`

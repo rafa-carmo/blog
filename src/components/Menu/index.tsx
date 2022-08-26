@@ -29,10 +29,10 @@ export function Menu() {
         <Logo width={50} height={30} />
         Blog
       </div>
-      <nav className="flex-1 hidden md:block">
+      <nav className="flex-2 hidden lg:block">
         <Options />
       </nav>
-      <div className="pr-5">
+      <div className="lg:px-5">
         <SearchBar />
       </div>
     </S.Wrapper>
