@@ -8,7 +8,7 @@ export const Wrapper = tw.div`
     items-center
     fixed
     top-0
-    z-10
+    z-40
     h-16
     transition-all
     border-b

@@ -2,29 +2,33 @@ import { Play } from 'phosphor-react'
 
 import * as S from './styles'
 
-interface CardProps {
+export interface CardProps {
   size?: 'medium' | 'full'
   border?: boolean
   title: string
+  type?: string
   subtitle?: string
   background?: string
+  height?: 'small' | 'large'
 }
 
 export function Card({
   border,
   title,
+  type,
   subtitle,
   background,
-  size = 'medium'
+  size = 'medium',
+  height = 'large'
 }: CardProps) {
   return (
-    <S.Wrapper size={size}>
+    <S.Wrapper size={size} height={height}>
       {border && <S.Mask />}
       <S.Container style={{ backgroundImage: `url('${background}')` }}>
         <S.Content>
-          <S.DescriptionContainer>
+          <S.TypeContainer>{type}</S.TypeContainer>
+          <S.DescriptionContainer height={height}>
             <div className="flex-[3] flex flex-col gap-4">
-              <div>Type</div>
               <S.Title>{title}</S.Title>
               <S.Subtitle>{subtitle}</S.Subtitle>
             </div>

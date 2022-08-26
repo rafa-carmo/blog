@@ -25,6 +25,7 @@ export function HomeSlider() {
           border
           background="https://img.freepik.com/fotos-gratis/banco-de-madeira-no-deck-do-lago-cercado-de-verdes_181624-46369.jpg?w=1380&t=st=1660936988~exp=1660937588~hmac=e332cca19c12fa2522368a72a2ccee845f08c183768136d8fd4bd7126fbef4f6"
           size="medium"
+          height="small"
         />
         <Card
           title={`Post menor`}
@@ -32,6 +33,7 @@ export function HomeSlider() {
           border
           background="https://img.freepik.com/fotos-gratis/banco-de-madeira-no-deck-do-lago-cercado-de-verdes_181624-46369.jpg?w=1380&t=st=1660936988~exp=1660937588~hmac=e332cca19c12fa2522368a72a2ccee845f08c183768136d8fd4bd7126fbef4f6"
           size="medium"
+          height="small"
         />
       </SwiperSlide>
       {[...Array(10).keys()].map((id) => (
@@ -42,6 +44,7 @@ export function HomeSlider() {
             border
             background="https://img.freepik.com/fotos-gratis/banco-de-madeira-no-deck-do-lago-cercado-de-verdes_181624-46369.jpg?w=1380&t=st=1660936988~exp=1660937588~hmac=e332cca19c12fa2522368a72a2ccee845f08c183768136d8fd4bd7126fbef4f6"
             size="full"
+            height="small"
           />
         </SwiperSlide>
       ))}

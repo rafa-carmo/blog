@@ -11,9 +11,7 @@ Object.defineProperty(NextImage, 'default', {
 
 export const decorators = [
   (Story) => (
-
       <Story />
-
   )
 ]
 
@@ -29,4 +27,5 @@ export const parameters = {
   previewTabs: {
     'storybook/docs/panel': { index: -1 },
   },
+  layout: 'fullscreen'
 };

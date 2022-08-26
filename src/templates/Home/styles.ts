@@ -5,12 +5,11 @@ export const Wrapper = tw.main`
 `
 export const HeaderContainer = tw.div`
     border-b
-    dark:border-white/50
-    border-zinc-900/50
+        
     p-7
-    
     min-h-[25rem]
-    `
+    mb-8
+`
 
 export const Header = tw.div`
     mb-4

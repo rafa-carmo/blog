@@ -12,6 +12,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     'storybook-dark-mode',
+    'storybook-addon-outline',
     {
       /**
        * Fix Storybook issue with PostCSS@8

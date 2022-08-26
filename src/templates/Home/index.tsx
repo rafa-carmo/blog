@@ -1,11 +1,17 @@
 import { Container } from 'components/Container'
-import { HomeSlider } from 'components/HomeSlider'
+import { Heading } from 'components/Heading'
+import { PostCardProps } from 'components/PostCard'
 import { MagnifyingGlass } from 'phosphor-react'
 import { Base } from 'templates/Base'
 
+import { PostCard } from '../../components/PostCard/index'
+import mock from './mock'
 import * as S from './styles'
+interface HomeProps {
+  cards: PostCardProps[]
+}
 
-export function Home() {
+export function Home({ cards = mock.cards }: HomeProps) {
   return (
     <Base>
       {/* <div className="absolute top-0 right-0 left-0 z-0 pointer-events-none opacity-20 md:h-[40vh] bg-[url('https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-tecnologia-digital-com-borda-de-hexagono-em-tom-roxo-escuro_53876-126069.jpg?w=2000')]"></div> */}
@@ -26,9 +32,22 @@ export function Home() {
           </S.NewsletterContainer>
         </Container>
       </S.HeaderContainer>
-      <div className="py-10">
-        <HomeSlider />
-      </div>
+      <Container>
+        <Heading text="Destaques" />
+        <div className="flex flex-shrink gap-5 w-full h-full mt-4">
+          {cards.map((card, index) => (
+            <div
+              key={card.title}
+              style={{ flex: `${index === 0 ? '50%' : '25%'}` }}
+            >
+              <PostCard {...card} size={index === 0 ? 'large' : 'medium'} />
+            </div>
+          ))}
+        </div>
+      </Container>
+      <Container>
+        <div className="mt-10 w-full h-screen">Conteudo</div>
+      </Container>
     </Base>
   )
 }

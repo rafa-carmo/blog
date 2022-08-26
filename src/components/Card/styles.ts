@@ -1,20 +1,38 @@
 import tw from 'tailwind-styled-components'
 
-const WrapperModifiers = {
+import { CardProps } from '.'
+
+const sizeModifiers = {
   medium: `max-w-lg`,
   full: `max-w-screen`
 }
 
+const heightModifiers = {
+  small: `
+    md:h-[15rem]
+    h-[15rem]
+    md:max-h-[90%]
+  `,
+  large: `
+    md:h-[34.375rem]
+    h-[30rem]
+  `
+}
+
+type SizeProps = Pick<CardProps, 'size'>
+type HeightProps = Pick<CardProps, 'height'>
+
 export const Wrapper = tw.div`
     rounded-lg
     w-full
-    md:h-[34.375rem]
-    h-[30rem]
+    
     relative
     overflow-hidden
     cursor-pointer
-    ${({ size }: { size: 'medium' | 'full' }) => WrapperModifiers[size]}
-    shadow-md	
+    shadow-md
+    
+    ${({ size }: SizeProps) => size && sizeModifiers[size]}
+    ${({ height }: HeightProps) => height && heightModifiers[height]}
 `
 
 export const Mask = tw.div`
@@ -60,6 +78,21 @@ export const Content = tw.div`
     hover:bg-zinc-900/75
 `
 
+export const TypeContainer = tw.div`
+    absolute 
+    top-1 
+    left-2 
+    z-10
+    bg-zinc-600
+    rounded
+    px-2
+    py-1
+    text-sm
+    opacity-80
+    hover:opacity-100
+    transition-opacity
+`
+
 export const DescriptionContainer = tw.div`
     w-full
     h-full
@@ -69,6 +102,7 @@ export const DescriptionContainer = tw.div`
     gap-4
     flex-col
     md:flex-row
+    ${({ height }: HeightProps) => height && heightModifiers[height]}
 `
 
 export const Title = tw.h3`
