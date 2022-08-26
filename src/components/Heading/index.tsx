@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-interface HeadingProps {
+export interface HeadingProps {
   text: string
   size?: 'small' | 'medium' | 'large'
 }

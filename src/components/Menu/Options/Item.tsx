@@ -8,7 +8,7 @@ interface ItemProps {
 
 export default function Item({ label, hasSubItem = false }: ItemProps) {
   return (
-    <div
+    <li
       className={`flex relative dark:text-white ${
         hasSubItem && 'mr-5'
       } cursor-pointer
@@ -23,6 +23,6 @@ export default function Item({ label, hasSubItem = false }: ItemProps) {
           <ArrowBendRightDown size={15} />
         </div>
       )}
-    </div>
+    </li>
   )
 }

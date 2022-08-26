@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const Wrapper = tw.div`
+export const Wrapper = tw.header`
     py-5
     w-screen
     flex

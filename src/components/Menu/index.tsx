@@ -29,9 +29,9 @@ export function Menu() {
         <Logo width={50} height={30} />
         Blog
       </div>
-      <div className="flex-1 hidden md:block">
+      <nav className="flex-1 hidden md:block">
         <Options />
-      </div>
+      </nav>
       <div className="pr-5">
         <SearchBar />
       </div>
