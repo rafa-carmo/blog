@@ -5,13 +5,12 @@ import { MagnifyingGlass } from 'phosphor-react'
 import { Base } from 'templates/Base'
 
 import { PostCard } from '../../components/PostCard/index'
-import mock from './mock'
 import * as S from './styles'
 interface HomeProps {
   cards: PostCardProps[]
 }
 
-export function Home({ cards = mock.cards }: HomeProps) {
+export function Home({ cards }: HomeProps) {
   return (
     <Base>
       {/* <div className="absolute top-0 right-0 left-0 z-0 pointer-events-none opacity-20 md:h-[40vh] bg-[url('https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-tecnologia-digital-com-borda-de-hexagono-em-tom-roxo-escuro_53876-126069.jpg?w=2000')]"></div> */}
