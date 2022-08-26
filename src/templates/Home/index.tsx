@@ -38,6 +38,7 @@ export function Home({ cards = mock.cards }: HomeProps) {
           {cards.map((card, index) => (
             <div
               key={card.title}
+              className="border"
               style={{ flex: `${index === 0 ? '50%' : '25%'}` }}
             >
               <PostCard {...card} size={index === 0 ? 'large' : 'medium'} />

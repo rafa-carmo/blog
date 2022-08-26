@@ -38,6 +38,7 @@ export function PostCard({
             height={342}
             alt={background.alt}
             src={background.url}
+            layout="responsive"
           />
         </S.CoverOverlay>
         <S.Content size={size}>

@@ -14,7 +14,7 @@ const WrapperModifiers = {
 type SizeProps = Pick<PostCardProps, 'size'>
 export const Wrapper = tw.article`
     relative
-    max-w-[560px]
+    overflow-hidden
     h-[342px]
     w-full
     group
@@ -92,7 +92,7 @@ export const Title = tw.h2`
     text-3xl
     font-bold
     mb-5
-    line-clamp-1
+    line-clamp-2
 `
 
 export const Date = tw.span`
