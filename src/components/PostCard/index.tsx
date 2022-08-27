@@ -15,6 +15,7 @@ export interface PostCardProps {
   size?: 'medium' | 'large'
   category: string
   title: string
+  description?: string
   createdAt: Date
   background: ImageProps
 }
@@ -23,6 +24,7 @@ export function PostCard({
   category,
   size = 'medium',
   title,
+  description,
   createdAt,
   background
 }: PostCardProps) {
@@ -50,6 +52,7 @@ export function PostCard({
             <time />
             {avaliableDateFormat}
           </S.Date>
+          {description && <S.Description>{description}</S.Description>}
         </S.Content>
       </S.Container>
     </S.Wrapper>

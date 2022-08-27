@@ -107,4 +107,14 @@ export const Date = tw.span`
     pl-2    
     text-sm
     font-thin
+    text-zinc-600/75
+`
+
+export const Description = tw.span`
+    font-thin
+    text-sm
+    text-zinc-600
+    line-clamp-4
+    mt-5
+    px-2
 `

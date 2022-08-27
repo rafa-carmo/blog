@@ -46,8 +46,21 @@ export function Home({ cards }: HomeProps) {
         </div>
       </Container>
       <Container>
-        <div className="mt-10 w-full h-screen flex gap-10 md:flex-row flex-col">
-          <div className="flex-[60%] bg-white w-full p-10">Matérias</div>
+        <div className="my-10 w-full  flex gap-10 md:flex-row flex-col">
+          <div className="flex-[50%] bg-white w-full p-10 ">
+            <div className="grid grid-cols-2 gap-10">
+              {cards.map((card, index) => (
+                <div key={card.title} className="shadow">
+                  <PostCard
+                    {...card}
+                    size="medium"
+                    description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="w-full h-fit text-center mt-10 ">Pagination</div>
+          </div>
           <div className="flex-1 bg-white">Side</div>
         </div>
       </Container>
