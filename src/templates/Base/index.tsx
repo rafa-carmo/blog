@@ -27,8 +27,8 @@ export function Base({ children }: BaseProps) {
       <S.Wrapper>
         <Menu />
         {children}
+        <Footer />
       </S.Wrapper>
-      <Footer />
     </div>
   )
 }

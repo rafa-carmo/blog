@@ -19,21 +19,23 @@ function PostCardTest({
   description
 }: PostCardProps) {
   return (
-    <div className="p-4 w-full">
-      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+    <div className="p-4 w-full ">
+      <div className="h-full border-2 dark:border-gray-200/25 border-opacity-60 rounded overflow-hidden shadow-md dark:shadow-white/25 dark:bg-zinc-200/5">
         <img
           className="lg:h-48 md:h-36 w-full object-cover object-center"
           src={background.url}
           alt={background.alt}
         />
         <div className="p-6">
-          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 dark:text-gray-100/75 mb-1">
             {category}
           </h2>
-          <h3 className="title-font text-lg font-medium text-gray-900 mb-3">
+          <h3 className="title-font text-lg font-medium text-gray-900 dark:text-gray-100 mb-3">
             {title}
           </h3>
-          <p className="leading-relaxed mb-3">{description}</p>
+          <p className="leading-relaxed mb-3 dark:text-gray-100">
+            {description}
+          </p>
           <div className="flex items-center flex-wrap ">
             <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
               Learn More
@@ -50,7 +52,7 @@ function PostCardTest({
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
-            <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+            <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200 dark:border-zinc-200/25">
               <svg
                 className="w-4 h-4 mr-1"
                 stroke="currentColor"

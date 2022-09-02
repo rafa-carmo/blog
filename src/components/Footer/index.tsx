@@ -8,15 +8,15 @@ import React from 'react'
 
 export function Footer() {
   return (
-    <footer className="relative bg-blueGray-200 pt-8 pb-6">
+    <footer className="relative bg-gray-200 dark:bg-zinc-600 pt-8 pb-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl fonat-semibold text-blueGray-700">
-              Let&apos;s keep in touch!
+            <h4 className="text-3xl fonat-semibold text-gray-700 dark:text-zinc-200">
+              Um blog de programação
             </h4>
-            <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
-              Find us on any of these platforms, we respond 1-2 business days.
+            <h5 className="text-lg mt-0 mb-2 text-gray-600 dark:text-zinc-200/25">
+              Nos siga em algumas de nossas redes sociais.
             </h5>
             <div className="mt-6 lg:mb-0 mb-6 flex gap-1">
               <button
@@ -48,13 +48,13 @@ export function Footer() {
           <div className="w-full lg:w-6/12 px-4">
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-full lg:w-4/12 px-4 ml-auto">
-                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                <span className="block uppercase text-gray-500 dark:text-zinc-200 text-sm font-semibold mb-2">
                   Useful Links
                 </span>
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://www.creative-tim.com/presentation?ref=njs-profile"
                     >
                       About Us
@@ -62,7 +62,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://blog.creative-tim.com?ref=njs-profile"
                     >
                       Blog
@@ -70,7 +70,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://www.github.com/creativetimofficial?ref=njs-profile"
                     >
                       Github
@@ -78,7 +78,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
                     >
                       Free Products
@@ -87,13 +87,13 @@ export function Footer() {
                 </ul>
               </div>
               <div className="w-full lg:w-4/12 px-4">
-                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                <span className="block uppercase text-gray-500 dark:text-zinc-200 text-sm font-semibold mb-2">
                   Other Resources
                 </span>
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                     >
                       MIT License
@@ -101,7 +101,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/terms?ref=njs-profile"
                     >
                       Terms &amp; Conditions
@@ -109,7 +109,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/privacy?ref=njs-profile"
                     >
                       Privacy Policy
@@ -117,7 +117,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      className="text-gray-600 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200 font-semibold block pb-2 text-sm"
                       href="https://creative-tim.com/contact-us?ref=njs-profile"
                     >
                       Contact Us
@@ -128,14 +128,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-blueGray-300" />
+        <hr className="my-6 border-gray-300 dark:text-zinc-200" />
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm text-blueGray-500 font-semibold py-1">
+            <div className="text-sm text-gray-500 dark:text-zinc-200 font-semibold py-1">
               Copyright © <span id="get-current-year">2021</span>
               <a
-                href="https://www.creative-tim.com/product/notus-js"
-                className="text-blueGray-500 hover:text-gray-800"
+                href="#"
+                className="text-gray-500 dark:text-zinc-200 hover:text-gray-800"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -143,8 +143,8 @@ export function Footer() {
                 Notus JS by{' '}
               </a>
               <a
-                href="https://www.creative-tim.com?ref=njs-profile"
-                className="text-blueGray-500 hover:text-blueGray-800"
+                href="#"
+                className="text-gray-500 dark:text-zinc-200 hover:text-gray-800 dark:text-zinc-200"
               >
                 Creative Tim
               </a>
