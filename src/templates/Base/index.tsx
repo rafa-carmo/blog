@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer'
 import { Menu } from 'components/Menu'
 import { MoonStars, SunDim } from 'phosphor-react'
 import { useState } from 'react'
@@ -27,6 +28,7 @@ export function Base({ children }: BaseProps) {
         <Menu />
         {children}
       </S.Wrapper>
+      <Footer />
     </div>
   )
 }
