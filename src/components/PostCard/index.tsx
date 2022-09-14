@@ -1,6 +1,6 @@
-import { format } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
 import Image from 'next/image'
+import Link from 'next/link'
+import { dateFormat } from 'utils/dateFormat'
 
 import * as S from './styles'
 
@@ -16,7 +16,7 @@ export interface PostCardProps {
   category: string
   title: string
   description?: string
-  createdAt: Date
+  createdAt: Date | string
   background: ImageProps
 }
 
@@ -28,9 +28,6 @@ export function PostCard({
   createdAt,
   background
 }: PostCardProps) {
-  const avaliableDateFormat = format(createdAt, "d' de 'MMMM' de 'yyyy'", {
-    locale: ptBR
-  })
   return (
     <S.Wrapper size={size}>
       <S.Container>
@@ -47,10 +44,15 @@ export function PostCard({
           <S.MetaCategory size={size}>
             <S.Category>{category}</S.Category>
           </S.MetaCategory>
-          <S.Title>{title}</S.Title>
-          <S.Date>
-            <time />
-            {avaliableDateFormat}
+          <Link href={`${category}/${title}`}>
+            <a>
+              <S.Title size={size}>{title}</S.Title>
+            </a>
+          </Link>
+          <S.Date size={size}>
+            <time dateTime={dateFormat({ date: createdAt, type: 'seo' })}>
+              {dateFormat({ date: createdAt })}
+            </time>
           </S.Date>
           {description && <S.Description>{description}</S.Description>}
         </S.Content>

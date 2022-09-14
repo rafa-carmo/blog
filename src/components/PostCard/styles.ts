@@ -33,10 +33,9 @@ export const Container = tw.div`
 
 const CoverModifier = {
   medium: `
-        relative
     `,
   large: `
-        relative
+
         md:absolute
         top-0
         bottom-0
@@ -46,8 +45,8 @@ const CoverModifier = {
 }
 export const CoverOverlay = tw.div`
     ${({ size }: SizeProps) => size && CoverModifier[size]}
-    z-0
-    
+    relative
+    z-10
     after:absolute
     after:top-0
     after:bottom-0
@@ -68,10 +67,10 @@ export const Content = tw.div`
     h-full
     px-5
     pb-4
-    bg-white
-
+    
+    
     ${({ size }: SizeProps) =>
-      size === 'medium' ? 'bg-white' : 'md:bg-transparent'}
+      size === 'medium' ? 'dark:bg-zinc-200/5' : 'md:bg-transparent'}
 
 `
 
@@ -96,18 +95,25 @@ export const Category = tw.li`
 
 export const Title = tw.h2`
     relative
-    text-3xl
+    text-2xl
     font-bold
     mt-auto
     mb-5
     line-clamp-2
+ 
+    ${({ size }: SizeProps) =>
+      size === 'medium' ? ' text-zinc-700 dark:text-zinc-200' : 'text-zinc-200'}
 `
 
 export const Date = tw.span`
     pl-2    
     text-sm
     font-thin
-    text-zinc-600/75
+
+    ${({ size }: SizeProps) =>
+      size === 'medium'
+        ? '     text-zinc-600/75   dark:text-zinc-400'
+        : 'text-zinc-400'}
 `
 
 export const Description = tw.span`

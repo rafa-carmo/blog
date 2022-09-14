@@ -60,8 +60,9 @@ export function Home({ cards, posts }: HomeProps) {
                   key={index}
                   background={card.background}
                   category={card.category}
-                  description={card.description!}
+                  description={card.description || 'Description'}
                   title={card.title}
+                  slug={card.title}
                 />
               ))}
             </div>

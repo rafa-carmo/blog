@@ -1,5 +1,7 @@
 .storybook/*.js
 packages/**/*.js
+next.config.js
+tailwind.config.js
 node_modules
 dist
 !.storybook

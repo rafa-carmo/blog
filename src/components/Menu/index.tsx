@@ -1,4 +1,5 @@
 import { Logo } from 'components/Logo'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { Options } from './Options'
@@ -25,10 +26,12 @@ export function Menu() {
           : 'bg-zinc-100 dark:bg-zinc-900 border-zinc-900 dark:border-white'
       }`}
     >
-      <div className="ml-5 flex-1 max-w-xs flex items-center gap-2 text-white">
-        <Logo width={50} height={30} />
-        Blog
-      </div>
+      <Link href="/">
+        <a className="ml-5 flex-1 max-w-xs flex items-center gap-2 dark:text-white text-zinc-900 font-bold">
+          <Logo width={50} height={30} />
+          Blog
+        </a>
+      </Link>
       <nav className="flex-2 hidden lg:block">
         <Options />
       </nav>
