@@ -5,17 +5,15 @@ export const Wrapper = tw.main`
 `
 export const HeaderContainer = tw.div`
     border-b
-
     p-7
     min-h-[25rem]
     mb-8
-    
+    flex
 `
 
 export const Header = tw.div`
     mb-4
     pb-10
-
 `
 
 export const Title = tw.h1`
@@ -25,7 +23,8 @@ export const Title = tw.h1`
     font-[Merriweather] 
     md:text-5xl 
     text-2xl
-    mt-32 
+    mt-24
+    mb-12 
     relative 
     z-1
 

@@ -1,42 +1,54 @@
 import { Container } from 'components/Container'
 import { Heading } from 'components/Heading'
 import { PostCardProps } from 'components/PostCard'
+import { PostCard } from 'components/PostCard/index'
 import PostCardTest from 'components/PostCardTest'
 import { MagnifyingGlass } from 'phosphor-react'
 import { Base } from 'templates/Base'
 
-import { Card } from '../../components/Card/index'
-import { PostCard } from '../../components/PostCard/index'
 import * as S from './styles'
+import SvgComponent from './SvgComponent'
 interface HomeProps {
   cards: PostCardProps[]
   posts: PostCardProps[]
 }
 
 export function Home({ cards, posts }: HomeProps) {
+  console.log(25 % 5)
   return (
     <Base>
       {/* <div className="absolute top-0 right-0 left-0 z-0 pointer-events-none opacity-20 md:h-[40vh] bg-[url('https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-tecnologia-digital-com-borda-de-hexagono-em-tom-roxo-escuro_53876-126069.jpg?w=2000')]"></div> */}
       <S.HeaderContainer>
-        <Container>
-          <S.Header>
-            <S.Title>Blog de programação</S.Title>
-            <S.Subtitle>
-              Dicas e tutoriais para você aprimorar seu codigo.
-            </S.Subtitle>
-          </S.Header>
-          <S.NewsletterContainer>
-            <S.NewsletterInput placeholder="O que está procurando?" />
-            <button className="absolute right-2 top-0 bottom-0 flex items-center gap-2">
-              {/* <EnvelopeSimple size={32} weight="bold" className="opacity-30" /> */}
-              <MagnifyingGlass size={32} weight="bold" className="opacity-30" />
-            </button>
-          </S.NewsletterContainer>
+        <Container className="flex justify-between">
+          <div>
+            <S.Header>
+              <S.Title>Blog de programação</S.Title>
+              <S.Subtitle>
+                Dicas e tutoriais para você aprimorar seu codigo.
+              </S.Subtitle>
+            </S.Header>
+            <S.NewsletterContainer>
+              <S.NewsletterInput placeholder="O que está procurando?" />
+              <button className="absolute right-2 top-0 bottom-0 flex items-center gap-2">
+                {/* <EnvelopeSimple size={32} weight="bold" className="opacity-30" /> */}
+                <MagnifyingGlass
+                  size={32}
+                  weight="bold"
+                  className="opacity-30"
+                />
+              </button>
+            </S.NewsletterContainer>
+          </div>
+
+          <div className="w-full h-full max-w-md">
+            <SvgComponent />
+          </div>
         </Container>
       </S.HeaderContainer>
+
       <Container>
         <Heading text="Destaques" />
-        <div className="flex md:flex-shrink gap-8 w-full h-full mt-4 flex-col md:flex-row">
+        <div className="flex md:flex-shrink gap-8 w-full h-full mt-4 flex-col md:flex-row just">
           {cards.map((card, index) => (
             <div
               key={card.title}
@@ -48,70 +60,47 @@ export function Home({ cards, posts }: HomeProps) {
           ))}
         </div>
       </Container>
+      <div className="grid place-items-center my-8">
+        <div className="w-3/4 grid place-items-center h-24 bg-zinc-400">
+          Anuncio?
+        </div>
+      </div>
       <Container>
-        <div className="mt-24">
+        <div className="mt-14">
           <Heading text="Ultimos posts" />
         </div>
         <div className="mt-2 mb-10 w-full flex gap-10 md:flex-row flex-col">
           <div className="flex-1 w-full p-10 ">
-            <div className="grid grid-cols-3 gap-10">
-              {posts.map((card, index) => (
-                <PostCardTest
-                  key={index}
-                  background={card.background}
-                  category={card.category}
-                  description={card.description || 'Description'}
-                  title={card.title}
-                  slug={card.title}
-                />
-              ))}
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+              {posts.map((card, index) => {
+                return (index + 1) % 6 === 0 ? (
+                  <>
+                    <div className="w-full h-full bg-zinc-400 p-4 rounded-lg grid place-items-center">
+                      AdSense
+                    </div>
+                    <PostCardTest
+                      key={index}
+                      background={card.background}
+                      category={card.category}
+                      description={card.description || 'Description'}
+                      title={card.title}
+                      slug={card.title}
+                    />
+                  </>
+                ) : (
+                  <PostCardTest
+                    key={index}
+                    background={card.background}
+                    category={card.category}
+                    description={card.description || 'Description'}
+                    title={card.title}
+                    slug={card.title}
+                  />
+                )
+              })}
             </div>
           </div>
         </div>
-
-        {/* <Card
-            key={index}
-            title={card.title}
-            background={card.background.url}
-            subtitle={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-            size="medium"
-            border
-          /> */}
-
-        {/* <div className="mt-2 mb-10 w-full flex gap-10 md:flex-row flex-col">
-          <div className="flex-1 w-full p-10 ">
-            <div className="grid md:grid-cols-2 gap-10">
-              {cards.map((card, index) => (
-                <Card
-                  key={index}
-                  title={card.title}
-                  background={card.background.url}
-                  subtitle={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-                  size="medium"
-                  border
-                />
-              ))}
-            </div>
-          </div>
-        </div> */}
-        {/* 
-        <div className="my-10 w-full flex gap-10 md:flex-row flex-col">
-          <div className="flex-[50%] bg-white w-full p-10 ">
-            <div className="grid grid-cols-2 gap-10">
-              {cards.map((card, index) => (
-                <div key={card.title} className="shadow">
-                  <PostCard
-                    {...card}
-                    size="medium"
-                    description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="w-full h-fit text-center mt-10 ">Pagination</div>
-          </div>
-          <div className="flex-1 bg-white">Side</div>
-        </div> */}
       </Container>
     </Base>
   )

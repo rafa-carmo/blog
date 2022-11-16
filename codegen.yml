@@ -1,6 +1,6 @@
 overwrite: true
 
-schema: 'http://192.168.5.25:1337/graphql'
+schema: 'https://api-sa-east-1.hygraph.com/v2/cl7vci97i1ode01ulaewf5nkj/master'
 
 documents: './src/graphql/**/*.ts'
 
