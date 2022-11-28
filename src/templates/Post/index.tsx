@@ -1,8 +1,6 @@
 import { Container } from 'components/Container'
 import MarkdwonHighlighter from 'components/MarkdownHighlighter'
-import { url } from 'inspector'
 import Image from 'next/image'
-import ReactMarkdown from 'react-markdown'
 import { Base } from 'templates/Base'
 import { dateFormat } from 'utils/dateFormat'
 
